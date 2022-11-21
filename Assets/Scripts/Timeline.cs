@@ -8,6 +8,6 @@ public class Timeline : MonoBehaviour
     // Start is called before the first frame update
     void OnEnable() 
     {
-    SceneManager.LoadScene("02Exit",LoadSceneMode.Single);
-}
+    SceneManager.LoadScene("02Main",LoadSceneMode.Single);
+    }
 }
