@@ -6,7 +6,7 @@ using TMPro;
 
 public class Player : MonoBehaviour
 {
-       public float speed;
+    public float speed;
     public float rotationSpeed;
     public float jumpSpeed;
     public float jumpButtonGracePeriod;
@@ -17,6 +17,10 @@ public class Player : MonoBehaviour
     private float originalStepOffset;
     private float? lastGroundedTime;
     private float? jumpButtonPressedTime;
+
+    [SerializeField]
+    private Transform cameraTransform;
+
 
     // Start is called before the first frame update
     void Start()
@@ -34,6 +38,7 @@ public class Player : MonoBehaviour
 
         Vector3 movementDirection = new Vector3(horizontalInput, 0, verticalInput);
         float magnitude = Mathf.Clamp01(movementDirection.magnitude) * speed;
+        movementDirection = Quaternion.AngleAxis(cameraTransform.rotation.eulerAngles.y, Vector3.up) * movementDirection;
         movementDirection.Normalize();
 
         ySpeed += Physics.gravity.y * Time.deltaTime;
@@ -88,6 +93,17 @@ public class Player : MonoBehaviour
         {
             animator.SetBool("isRunning", false);
             animator.SetBool("isIdle",true);
+        }
+    }
+    private void OnApplicationFocus(bool focus) 
+    {
+        if (focus)
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+        }
+        else
+        {
+            Cursor.lockState = CursorLockMode.None;
         }
     }
 }
