@@ -29,7 +29,7 @@ public class Notes : MonoBehaviour
     }
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Reach"))
         {
             MessagePanel.SetActive(true);
             Action = true;
@@ -37,7 +37,7 @@ public class Notes : MonoBehaviour
     }
     void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Reach"))
         {
             MessagePanel.SetActive(false);
             Action = false;
