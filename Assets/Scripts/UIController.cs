@@ -15,5 +15,4 @@ public class UIController : MonoBehaviour
   {
     SceneManager.LoadScene(scenename,LoadSceneMode.Single);
   }
-  
 }
