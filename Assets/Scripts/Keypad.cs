@@ -18,9 +18,6 @@ public class Keypad : MonoBehaviour
     public TMP_Text textOB;
     public string answer = "12345";
 
-    public bool animate;
-
-
     void Start()
     {
   
@@ -80,8 +77,8 @@ public class Keypad : MonoBehaviour
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
             Time.timeScale = 0f;
-           if (textOB.text == "Right" )
-        {
+            if (textOB.text == "Right" )
+             {
             ANI.SetBool("animate", true);
             Debug.Log("its open");
             Time.timeScale = 1f;
