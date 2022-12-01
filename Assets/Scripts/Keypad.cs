@@ -66,11 +66,11 @@ public class Keypad : MonoBehaviour
 
     public void Update()
     {
-        if (textOB.text == "Right" && animate)
-        {
-            ANI.SetBool("animate", true);
-            Debug.Log("its open");
-        }
+       // if (textOB.text == "Right" && animate)
+        //{
+            //ANI.SetBool("animate", true);
+            //Debug.Log("its open");
+        //}
 
 
         if(keypadOB.activeInHierarchy)
@@ -80,6 +80,13 @@ public class Keypad : MonoBehaviour
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
             Time.timeScale = 0f;
+           if (textOB.text == "Right" )
+        {
+            ANI.SetBool("animate", true);
+            Debug.Log("its open");
+            Time.timeScale = 1f;
+        }
+
         }
 
     }
