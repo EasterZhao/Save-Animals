@@ -16,7 +16,7 @@ public class Keypad : MonoBehaviour
 
 
     public TMP_Text textOB;
-    public string answer = "12345";
+    public string answer = "24351";
 
     void Start()
     {
