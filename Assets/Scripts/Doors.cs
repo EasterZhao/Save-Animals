@@ -7,10 +7,6 @@ public class Doors : MonoBehaviour
     public Animator door;
     public GameObject openText;
     public bool inReach;
-
-
-
-
     void Start()
     {
         inReach = false;
@@ -34,10 +30,6 @@ public class Doors : MonoBehaviour
         }
     }
 
-
-
-
-
     void Update()
     {
 
@@ -51,9 +43,6 @@ public class Doors : MonoBehaviour
             DoorCloses();
         }
 
-
-
-
     }
     void DoorOpens ()
     {
@@ -66,6 +55,5 @@ public class Doors : MonoBehaviour
         door.SetBool("Open", false);
         door.SetBool("Closed", true);
     }
-
 
 }

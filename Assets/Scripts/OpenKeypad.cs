@@ -30,7 +30,7 @@ public class OpenKeypad : MonoBehaviour
        if (other.gameObject.tag == "Reach")
        {
           inReach = false;
-            keypadText.SetActive(false);
+          keypadText.SetActive(false);
 
        }
     }
@@ -41,9 +41,7 @@ public class OpenKeypad : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.E) && inReach)
         {
             keypadOB.SetActive(true);
-            Debug.Log("1");
         }
-        
 
     }
 }

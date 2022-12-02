@@ -14,6 +14,7 @@ public class Keypad : MonoBehaviour
     public GameObject animateOB;
     public Animator ANI;
 
+    public GameObject keypadPanel;
 
     public TMP_Text textOB;
     public string answer = "24351";
@@ -60,10 +61,15 @@ public class Keypad : MonoBehaviour
         hud.SetActive(true);
         Time.timeScale = 1f;
     }
-
+     IEnumerator EnableKeypadPanel()
+    {
+        yield return new WaitForSeconds(1f);
+        keypadPanel.SetActive(false);
+    }
+    
     public void Update()
     {
-       // if (textOB.text == "Right" && animate)
+        // if (textOB.text == "Right" && animate)
         //{
             //ANI.SetBool("animate", true);
             //Debug.Log("its open");
@@ -78,11 +84,12 @@ public class Keypad : MonoBehaviour
             Cursor.visible = true;
             Time.timeScale = 0f;
             if (textOB.text == "Right" )
-             {
+            {
             ANI.SetBool("animate", true);
             Debug.Log("its open");
-            Time.timeScale = 1f;
-        }
+            Time.timeScale = 1f; 
+            StartCoroutine(EnableKeypadPanel());
+            }
 
         }
 
