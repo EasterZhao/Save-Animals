@@ -15,4 +15,11 @@ public class UIController : MonoBehaviour
   {
     SceneManager.LoadScene(scenename,LoadSceneMode.Single);
   }
+
+private void Update() 
+{
+    Cursor.lockState = CursorLockMode.None;
+    Cursor.visible = true;
+}
+
 }

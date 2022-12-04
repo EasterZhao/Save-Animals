@@ -21,7 +21,6 @@ public class Player : MonoBehaviour
     [SerializeField]
     private Transform cameraTransform;
 
-
     // Start is called before the first frame update
     void Start()
     {

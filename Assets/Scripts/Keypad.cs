@@ -19,9 +19,9 @@ public class Keypad : MonoBehaviour
     public TMP_Text textOB;
     public string answer = "24351";
 
+
     void Start()
     {
-  
 
     }
     
@@ -61,11 +61,12 @@ public class Keypad : MonoBehaviour
         hud.SetActive(true);
         Time.timeScale = 1f;
     }
-     IEnumerator EnableKeypadPanel()
+     IEnumerator  EnableKeypadPanel()
     {
-        yield return new WaitForSeconds(1f);
-        keypadPanel.SetActive(false);
+       yield return new WaitForSeconds(1f);
+        Exit();   
     }
+
     
     public void Update()
     {
@@ -73,8 +74,7 @@ public class Keypad : MonoBehaviour
         //{
             //ANI.SetBool("animate", true);
             //Debug.Log("its open");
-        //}
-
+        //}      
 
         if(keypadOB.activeInHierarchy)
         {
@@ -89,6 +89,7 @@ public class Keypad : MonoBehaviour
             Debug.Log("its open");
             Time.timeScale = 1f; 
             StartCoroutine(EnableKeypadPanel());
+            //keypadPanel.SetActive(false);
             }
 
         }

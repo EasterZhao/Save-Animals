@@ -7,7 +7,7 @@ public class Laser : MonoBehaviour {
 private LineRenderer lr;
 
 public Transform startPoint;
-private bool PlayerGotHit = false;
+public bool PlayerHit = false;
 
  void Start () 
  {
@@ -17,6 +17,7 @@ private bool PlayerGotHit = false;
  // Update is called once per frame
  void Update () 
  {
+        PlayerHit = false;
         lr.SetPosition(0, startPoint.position);
         RaycastHit hit;
         if (Physics.Raycast(transform.position, transform.forward, out hit))
@@ -25,11 +26,12 @@ private bool PlayerGotHit = false;
             {
                 lr.SetPosition(1, hit.point);
             }
-            if(hit.transform.tag == "Player")
+            if(hit.transform.tag == "Reach" )
             {
-                PlayerGotHit = true;
+                PlayerHit = true;
             }
         }
   else lr.SetPosition(1, transform.forward * 5000);
+  
  }
 }
