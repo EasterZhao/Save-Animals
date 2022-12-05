@@ -14,11 +14,6 @@ public class AudioController : MonoBehaviour
 
     void Update()
     {
-         if (w.endAudio)
-        {
-            //Stop the audio
-            m_MyAudioSource.Stop();
 
-        }
     }
 }
