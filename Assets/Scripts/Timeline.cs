@@ -10,4 +10,5 @@ public class Timeline : MonoBehaviour
     {
     SceneManager.LoadScene("02Main",LoadSceneMode.Single);
     }
+    //hou mian quxiao
 }

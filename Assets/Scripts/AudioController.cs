@@ -5,7 +5,6 @@ using UnityEngine;
 public class AudioController : MonoBehaviour
 {
      AudioSource m_MyAudioSource;
-     public Win w;
     void Start()
     {
         m_MyAudioSource = GetComponent<AudioSource>();
@@ -16,4 +15,5 @@ public class AudioController : MonoBehaviour
     {
 
     }
+    //hou mian gai
 }

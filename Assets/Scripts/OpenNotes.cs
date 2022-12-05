@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+//https://www.youtube.com/watch?v=JIuaBUsmRfs
 public class OpenNotes : MonoBehaviour
 {
     [SerializeField]
@@ -10,7 +10,7 @@ public class OpenNotes : MonoBehaviour
 
     public GameObject MessagePanel;
     public bool Action;
-        void Start()
+    void Start()
     {
         Action = false;
     }
@@ -20,15 +20,15 @@ public class OpenNotes : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.E))
         {
-           
+
             if (Action == true)
             {
                 MessagePanel.SetActive(false);
                 Panel.SetActive(true);
-                Action = false; 
-             }
-         }
-           
+                Action = false;
+            }
+        }
+
 
     }
     void OnTriggerEnter(Collider other)
@@ -39,15 +39,15 @@ public class OpenNotes : MonoBehaviour
             Action = true;
         }
     }
-        void OnTriggerExit(Collider other)
-   {
+    void OnTriggerExit(Collider other)
+    {
         if (other.CompareTag("Reach"))
         {
             MessagePanel.SetActive(false);
             Action = false;
             Panel.SetActive(false);
-       }
-   }
+        }
+    }
 
 
 }

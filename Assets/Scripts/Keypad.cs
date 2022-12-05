@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+//https://www.youtube.com/watch?v=c2Ze4WRUgKY&t=2s
 public class Keypad : MonoBehaviour
 {
     public GameObject player;
@@ -19,21 +20,15 @@ public class Keypad : MonoBehaviour
     public TMP_Text textOB;
     public string answer = "24351";
 
-
-    void Start()
-    {
-
-    }
-    
-
-
     public void Number(int number)
     {
+     // Enter a number then returns a number as a string.
         textOB.text += number.ToString();
     }
 
     public void Execute()
     {
+     // The value entered, the right is displayed right ,wrong is displayed wrong
         if (textOB.text == answer)
         {
             textOB.text = "Right";
@@ -47,6 +42,7 @@ public class Keypad : MonoBehaviour
 
     }
 
+   // Empty the text border
     public void Clear()
     {
         {
@@ -54,6 +50,7 @@ public class Keypad : MonoBehaviour
         }
     }
 
+    // Exit the Keypad Panel
     public void Exit()
     {
         keypadOB.SetActive(false);
@@ -61,35 +58,28 @@ public class Keypad : MonoBehaviour
         hud.SetActive(true);
         Time.timeScale = 1f;
     }
-     IEnumerator  EnableKeypadPanel()
+    IEnumerator EnableKeypadPanel()
     {
-       yield return new WaitForSeconds(1f);
-        Exit();   
+        yield return new WaitForSeconds(1f);
+        Exit();
     }
 
-    
+
     public void Update()
     {
-        // if (textOB.text == "Right" && animate)
-        //{
-            //ANI.SetBool("animate", true);
-            //Debug.Log("its open");
-        //}      
-
-        if(keypadOB.activeInHierarchy)
+        if (keypadOB.activeInHierarchy)
         {
             hud.SetActive(false);
             inv.SetActive(false);
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
             Time.timeScale = 0f;
-            if (textOB.text == "Right" )
+            if (textOB.text == "Right")
             {
-            ANI.SetBool("animate", true);
-            Debug.Log("its open");
-            Time.timeScale = 1f; 
-            StartCoroutine(EnableKeypadPanel());
-            //keypadPanel.SetActive(false);
+                ANI.SetBool("animate", true);
+                Debug.Log("its open");
+                Time.timeScale = 1f;
+                StartCoroutine(EnableKeypadPanel());
             }
 
         }

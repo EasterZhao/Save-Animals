@@ -4,104 +4,78 @@ using UnityEngine;
 
 public class PlayerGothit : MonoBehaviour
 {
-   public Laser L;
-   public Laser L1;
-   public Laser L2;
-   public Laser L3;
-   public Laser L4;
-   public Laser L5;
-   public Laser L6;
-   public Laser L7;
-   public Laser L8;
-   public Laser L9;
-   public Laser L10;
-   public Laser L11;
-   private Vector3 myPosition;
+    public Laser L;
+    public Laser L1;
+    public Laser L2;
+    public Laser L3;
+    public Laser L4;
+    public Laser L5;
+    public Laser L6;
+    public Laser L7;
+    public Laser L8;
+    public Laser L9;
+    public Laser L10;
+    public Laser L11;
+    private Vector3 myPosition;
 
- public void MoveGameObject()
- {
-     transform.position = new Vector3(-1.14f, -0.72f, -35.5f);
-     transform.Rotate(0, 0, 0,Space.World);
- }
-    void Start()
+    public void MoveGameObject()
     {
-
+        // The player moves to a specific coordinate and does not change direction
+        transform.position = new Vector3(-1.14f, -0.72f, -35.5f);
+        transform.Rotate(0, 0, 0, Space.World);
     }
 
-    // Update is called once per frame
+    // Read the PlayerHit event in the Laser script 
+    // Run the MoveGameObject method if it is true.
     void Update()
     {
-        if(L.PlayerHit)
+        if (L.PlayerHit)
         {
-            //to position
-           MoveGameObject();
-            Debug.Log("1");
+            MoveGameObject();
         }
-            if(L1.PlayerHit)
+        if (L1.PlayerHit)
         {
-            //to position
-           MoveGameObject();
-            Debug.Log("1");
+            MoveGameObject();
         }
-            if(L2.PlayerHit)
+        if (L2.PlayerHit)
         {
-            //to position
-           MoveGameObject();
-            Debug.Log("1");
+            MoveGameObject();
         }
-            if(L3.PlayerHit)
+        if (L3.PlayerHit)
         {
-            //to position
-           MoveGameObject();
-            Debug.Log("1");
+            MoveGameObject();
         }
-            if(L4.PlayerHit)
+        if (L4.PlayerHit)
         {
-            //to position
-           MoveGameObject();
-            Debug.Log("1");
+            MoveGameObject();
         }
-            if(L5.PlayerHit)
+        if (L5.PlayerHit)
         {
-            //to position
-           MoveGameObject();
-            Debug.Log("1");
+            MoveGameObject();
         }
-            if(L6.PlayerHit)
+        if (L6.PlayerHit)
         {
-            //to position
-           MoveGameObject();
-            Debug.Log("1");
+            MoveGameObject();
         }
-            if(L7.PlayerHit)
+        if (L7.PlayerHit)
         {
-            //to position
-           MoveGameObject();
-            Debug.Log("1");
+            MoveGameObject();
         }
-            if(L8.PlayerHit)
+        if (L8.PlayerHit)
         {
-            //to position
-           MoveGameObject();
-            Debug.Log("1");
+            MoveGameObject();
         }
-            if(L9.PlayerHit)
+        if (L9.PlayerHit)
         {
-            //to position
-           MoveGameObject();
-            Debug.Log("1");
+            MoveGameObject();
         }
-            if(L10.PlayerHit)
+        if (L10.PlayerHit)
         {
-            //to position
-           MoveGameObject();
-            Debug.Log("1");
+            MoveGameObject();
         }
-            if(L11.PlayerHit)
+        if (L11.PlayerHit)
         {
-            //to position
-           MoveGameObject();
-            Debug.Log("1");
+            MoveGameObject();
         }
 
     }

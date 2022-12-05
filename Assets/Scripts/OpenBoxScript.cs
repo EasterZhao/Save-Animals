@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+//https://www.youtube.com/watch?v=KEWihN-qm1M&t=49s
 public class OpenBoxScript : MonoBehaviour
 {
     public Animator boxOB;
@@ -61,7 +61,7 @@ public class OpenBoxScript : MonoBehaviour
             keyMissingText.SetActive(true);
         }
 
-        if(isOpen)
+        if (isOpen)
         {
             boxOB.GetComponent<BoxCollider>().enabled = false;
             boxOB.GetComponent<OpenBoxScript>().enabled = false;

@@ -5,21 +5,25 @@ using UnityEngine.SceneManagement;
 
 public class UIController : MonoBehaviour
 {
-  public void QuitApplication()
-  {
-    Application.Quit();
-    //Debug.Log("exit");
-  }
-  
-  public void LoadScene(string scenename)
-  {
-    SceneManager.LoadScene(scenename,LoadSceneMode.Single);
-  }
+    // Quit application
+    public void QuitApplication()
+    {
 
-private void Update() 
-{
-    Cursor.lockState = CursorLockMode.None;
-    Cursor.visible = true;
-}
+        Application.Quit();
+    }
+
+    // Switch to the next scene
+    public void LoadScene(string scenename)
+    {
+
+        SceneManager.LoadScene(scenename, LoadSceneMode.Single);
+    }
+
+    private void Update()
+    {
+        // Always show cursor
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
 
 }

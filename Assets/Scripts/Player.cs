@@ -3,7 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-
+//https://www.youtube.com/watch?v=BJzYGsMcy8Q&t=2s
+//https://www.youtube.com/watch?v=ynh7b-AUSPE
+//https://www.youtube.com/watch?v=oQ9877FdR8o
 public class Player : MonoBehaviour
 {
     public float speed;
@@ -50,6 +52,7 @@ public class Player : MonoBehaviour
         if (Input.GetButtonDown("Jump"))
         {
             jumpButtonPressedTime = Time.time;
+            //Play jump animation
             animator.SetBool("isJumping",true);
             animator.SetBool("isRunning",false);
         }
@@ -82,6 +85,7 @@ public class Player : MonoBehaviour
 
         if (movementDirection != Vector3.zero)
         {
+           //play Running animation
             animator.SetBool("isRunning", true);
             animator.SetBool("isIdle",false);
             Quaternion toRotation = Quaternion.LookRotation(movementDirection, Vector3.up);
@@ -90,6 +94,7 @@ public class Player : MonoBehaviour
         }
         else
         {
+            //Play Idle animation
             animator.SetBool("isRunning", false);
             animator.SetBool("isIdle",true);
         }
@@ -98,10 +103,12 @@ public class Player : MonoBehaviour
     {
         if (focus)
         {
+            //Focus cursor disappears
             Cursor.lockState = CursorLockMode.Locked;
         }
         else
         {
+            //Unfocused cursor appears
             Cursor.lockState = CursorLockMode.None;
         }
     }

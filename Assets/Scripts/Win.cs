@@ -8,29 +8,29 @@ public class Win : MonoBehaviour
     public GameObject WinPanel;
     public GameObject WinNote;
     public bool inReach;
-    
+
     void Update()
     {
-        //Detects if the inReach event is true and presses E
-        if ( inReach && Input.GetKeyDown(KeyCode.E))
+        // Detects if the inReach event is true and presses E
+        if (inReach && Input.GetKeyDown(KeyCode.E))
         {
-            //
-             SceneManager.LoadScene("03Exit", LoadSceneMode.Single);
+            //Switching scenes to 03Exit
+            SceneManager.LoadScene("03Exit", LoadSceneMode.Single);
         }
     }
-     
-        void OnTriggerEnter(Collider other)
+    // Enter the RedButton's trigger to display the word prompt and set the event to true
+    void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Reach" )
+        if (other.gameObject.tag == "Reach")
         {
             WinNote.SetActive(true);
             inReach = true;
         }
     }
-
-            void OnTriggerExit(Collider other)
+    // Exit the RedButton's trigger to hide the word prompt and set the event to false
+    void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.tag == "Reach" )
+        if (other.gameObject.tag == "Reach")
         {
             WinNote.SetActive(false);
             inReach = false;

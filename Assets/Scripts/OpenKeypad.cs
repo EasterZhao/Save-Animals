@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+//https://www.youtube.com/watch?v=c2Ze4WRUgKY&t=2s
 public class OpenKeypad : MonoBehaviour
 {
     public GameObject keypadOB;
@@ -25,20 +25,20 @@ public class OpenKeypad : MonoBehaviour
         }
     }
 
-  void OnTriggerExit(Collider other)
-   {
-       if (other.gameObject.tag == "Reach")
-       {
-          inReach = false;
-          keypadText.SetActive(false);
+    void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "Reach")
+        {
+            inReach = false;
+            keypadText.SetActive(false);
 
-       }
+        }
     }
 
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.E) && inReach)
+        if (Input.GetKeyDown(KeyCode.E) && inReach)
         {
             keypadOB.SetActive(true);
         }
