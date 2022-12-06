@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class AudioController : MonoBehaviour
 {
-     AudioSource m_MyAudioSource;
+    //public AudioSource lightingSound;
     void Start()
     {
-        m_MyAudioSource = GetComponent<AudioSource>();
+        
     }
 
 
     void Update()
     {
-
+        //lightingSound.Play();
     }
-    //hou mian gai
+    
 }
