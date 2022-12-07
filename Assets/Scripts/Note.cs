@@ -26,5 +26,6 @@ public class Note : MonoBehaviour
     {
         NotePanel.SetActive(false);
         Time.timeScale = 1f;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 }

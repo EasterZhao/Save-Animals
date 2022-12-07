@@ -13,6 +13,7 @@ public class AutoScroll : MonoBehaviour
     [SerializeField]
     TextMeshProUGUI mainText;
 
+    public GameObject exitPanel;
     void Start()
     {
         myTransform = gameObject.GetComponent<RectTransform>();
@@ -27,7 +28,10 @@ public class AutoScroll : MonoBehaviour
             yield return null;
 
         }
-
+        if(myTransform.localPosition.y >= boundaryTextEnd)
+        {
+             exitPanel.SetActive(true);
+        }
     }
 
     // Update is called once per frame

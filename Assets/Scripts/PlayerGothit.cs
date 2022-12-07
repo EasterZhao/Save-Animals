@@ -16,13 +16,14 @@ public class PlayerGothit : MonoBehaviour
     public Laser L9;
     public Laser L10;
     public Laser L11;
-    private Vector3 myPosition;
+    public Transform myPosition;
+    public GameObject myPlayer;
 
+ 
     public void MoveGameObject()
     {
         // The player moves to a specific coordinate and does not change direction
-        transform.position = new Vector3(-1.14f, -0.72f, -35.5f);
-        transform.Rotate(0, 0, 0);
+        myPlayer.transform.position = myPosition.transform.position;
     }
 
     // Read the PlayerHit event in the Laser script 

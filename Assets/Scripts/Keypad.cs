@@ -57,11 +57,13 @@ public class Keypad : MonoBehaviour
         inv.SetActive(true);
         hud.SetActive(true);
         Time.timeScale = 1f;
+        Cursor.lockState = CursorLockMode.Locked;
     }
     IEnumerator EnableKeypadPanel()
     {
         yield return new WaitForSeconds(1f);
         Exit();
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
 
