@@ -90,6 +90,9 @@ public class Player : MonoBehaviour
            //play Running animation
             animator.SetBool("isRunning", true);
             animator.SetBool("isIdle",false);
+            //play the walk opened audio
+            var audioSource = GetComponent<AudioSource>();
+            audioSource.Play();
             Quaternion toRotation = Quaternion.LookRotation(movementDirection, Vector3.up);
 
             transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, rotationSpeed * Time.deltaTime);

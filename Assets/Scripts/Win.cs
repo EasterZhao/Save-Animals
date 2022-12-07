@@ -16,6 +16,9 @@ public class Win : MonoBehaviour
         {
             //Switching scenes to 03Exit
             SceneManager.LoadScene("03Exit", LoadSceneMode.Single);
+            //play the button audio
+            var audioSource = GetComponent<AudioSource>();
+            audioSource.Play();
         }
     }
     // Enter the RedButton's trigger to display the word prompt and set the event to true

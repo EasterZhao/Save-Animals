@@ -81,6 +81,10 @@ public class Keypad : MonoBehaviour
                 ANI.SetBool("animate", true);
                 Debug.Log("its open");
                 Time.timeScale = 1f;
+
+                //play the door opened audio
+                var audioSource = GetComponent<AudioSource>();
+                audioSource.Play();
                 StartCoroutine(EnableKeypadPanel());
             }
 

@@ -53,12 +53,18 @@ public class OpenBoxScript : MonoBehaviour
             openText.SetActive(false);
             keyMissingText.SetActive(false);
             isOpen = true;
+            //play the box opened audio
+            var audioSource = GetComponent<AudioSource>();
+            audioSource.Play();
         }
 
         else if (keyOBNeeded.activeInHierarchy == false && inReach && Input.GetKeyDown(KeyCode.E))
         {
             openText.SetActive(false);
             keyMissingText.SetActive(true);
+            //play the box locked audio
+            var audioSource = GetComponent<AudioSource>();
+            audioSource.Play();
         }
 
         if (isOpen)

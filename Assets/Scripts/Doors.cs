@@ -51,6 +51,10 @@ public class Doors : MonoBehaviour
         // Play the door Open animation
         door.SetBool("Open", true);
         door.SetBool("Closed", false);
+        
+         //play the door opened audio
+        var audioSource = GetComponent<AudioSource>();
+        audioSource.Play();
     }
 
     void DoorCloses()
