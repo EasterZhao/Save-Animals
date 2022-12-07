@@ -159,7 +159,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 2055}
+  m_AnchoredPosition: {x: 0, y: -730}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &313509454
@@ -195,10 +195,23 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+  m_text: "Although I managed to save all the little animals and bring them back
+    to the village, after a while many of them gradually deteriorated physically
+    for psychological reasons and finally closed their eyes forever. Only the fox
+    and the two rabbits, which had not had time to be experimented on, survived.
+    Once illegal animal experimentation abuse begins, the damage done to the animals
+    is irreversible.\r\n\r\nThere is no question that numerous advances in medicine
+    have been made possible by the sacrifice and suffering of animals. Thousands
+    of cats, dogs, monkeys,rabbits, hamsters, guinea pigs and other creatures are
+    subject to experimentation every year. Some experiments test efficacy, others
+    toxicity. Does it mean that animal experimentation should be banned.\r\n\r\nI
+    look forward to the day we stop using sentient beings in laboratory experiments.
+    \r\n\r\nIf you see someone abusing or experimenting on illegal animals in real
+    life, call Animal Protection on 0300 1234 999\r\nHelping animals who really need
+    help\r\n(Based on a true story)\r\n"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 44d894c9701230746be5da893d64490d, type: 2}
+  m_sharedMaterial: {fileID: -3657054652670702121, guid: 44d894c9701230746be5da893d64490d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -222,8 +235,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 15
-  m_fontSizeBase: 15
+  m_fontSize: 9
+  m_fontSizeBase: 9
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

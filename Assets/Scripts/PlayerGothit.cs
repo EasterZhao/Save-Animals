@@ -22,7 +22,7 @@ public class PlayerGothit : MonoBehaviour
     {
         // The player moves to a specific coordinate and does not change direction
         transform.position = new Vector3(-1.14f, -0.72f, -35.5f);
-        transform.Rotate(0, 0, 0, Space.World);
+        transform.Rotate(0, 0, 0);
     }
 
     // Read the PlayerHit event in the Laser script 
