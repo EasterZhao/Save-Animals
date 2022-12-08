@@ -23,6 +23,8 @@ public class Player : MonoBehaviour
     [SerializeField]
     private Transform cameraTransform;
 
+    public AudioClip impact;
+    AudioSource audioSource;
 
     // Start is called before the first frame update
     void Start()
@@ -30,6 +32,7 @@ public class Player : MonoBehaviour
         animator = GetComponent<Animator>();
         characterController = GetComponent<CharacterController>();
         originalStepOffset = characterController.stepOffset;
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -53,6 +56,7 @@ public class Player : MonoBehaviour
 
         if (Input.GetButtonDown("Jump"))
         {
+            audioSource.PlayOneShot(impact, 1F);
             jumpButtonPressedTime = Time.time;
             //Play jump animation
             animator.SetBool("isJumping",true);
@@ -90,9 +94,6 @@ public class Player : MonoBehaviour
            //play Running animation
             animator.SetBool("isRunning", true);
             animator.SetBool("isIdle",false);
-            //play the walk opened audio
-            var audioSource = GetComponent<AudioSource>();
-            audioSource.Play();
             Quaternion toRotation = Quaternion.LookRotation(movementDirection, Vector3.up);
 
             transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, rotationSpeed * Time.deltaTime);

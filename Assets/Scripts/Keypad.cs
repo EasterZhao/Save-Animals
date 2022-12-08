@@ -22,13 +22,13 @@ public class Keypad : MonoBehaviour
 
     public void Number(int number)
     {
-     // Enter a number then returns a number as a string.
+        // Enter a number then returns a number as a string.
         textOB.text += number.ToString();
     }
 
     public void Execute()
     {
-     // The value entered, the right is displayed right ,wrong is displayed wrong
+        // The value entered, the right is displayed right ,wrong is displayed wrong
         if (textOB.text == answer)
         {
             textOB.text = "Right";
@@ -42,7 +42,7 @@ public class Keypad : MonoBehaviour
 
     }
 
-   // Empty the text border
+    // Empty the text border
     public void Clear()
     {
         {
@@ -81,10 +81,6 @@ public class Keypad : MonoBehaviour
                 ANI.SetBool("animate", true);
                 Debug.Log("its open");
                 Time.timeScale = 1f;
-
-                //play the door opened audio
-                var audioSource = GetComponent<AudioSource>();
-                audioSource.Play();
                 StartCoroutine(EnableKeypadPanel());
             }
 

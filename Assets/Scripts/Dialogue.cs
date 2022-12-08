@@ -26,6 +26,7 @@ public class Dialogue : MonoBehaviour
             if (textComponent.text == lines[index])
             {
                 NextLine();
+
             }
             else
             {
@@ -56,6 +57,8 @@ public class Dialogue : MonoBehaviour
         {
             index++;
             textComponent.text = string.Empty;
+                            var audioSource = GetComponent<AudioSource>();
+                audioSource.Play();
             StartCoroutine(TypeLine());
         }
         else

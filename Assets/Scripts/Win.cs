@@ -14,11 +14,10 @@ public class Win : MonoBehaviour
         // Detects if the inReach event is true and presses E
         if (inReach && Input.GetKeyDown(KeyCode.E))
         {
-            //Switching scenes to 03Exit
-            SceneManager.LoadScene("03Exit", LoadSceneMode.Single);
             //play the button audio
             var audioSource = GetComponent<AudioSource>();
             audioSource.Play();
+            StartCoroutine(NextScene());
         }
     }
     // Enter the RedButton's trigger to display the word prompt and set the event to true
@@ -38,5 +37,11 @@ public class Win : MonoBehaviour
             WinNote.SetActive(false);
             inReach = false;
         }
+    }
+    IEnumerator NextScene()
+    {
+        yield return new WaitForSeconds(1f);
+        //Switching scenes to 03Exit
+        SceneManager.LoadScene("03Exit", LoadSceneMode.Single);
     }
 }
