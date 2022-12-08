@@ -18,8 +18,18 @@ public class Keypad : MonoBehaviour
     public GameObject keypadPanel;
 
     public TMP_Text textOB;
-    public string answer = "24351";
+    private string answer = "24351";
 
+    AudioSource audioSource;
+
+    public AudioClip right;
+
+    public AudioClip wrong;
+
+    void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
     public void Number(int number)
     {
         // Enter a number then returns a number as a string.
@@ -32,11 +42,13 @@ public class Keypad : MonoBehaviour
         if (textOB.text == answer)
         {
             textOB.text = "Right";
+            audioSource.PlayOneShot(right, 1F);
 
         }
         else
         {
             textOB.text = "Wrong";
+            audioSource.PlayOneShot(wrong, 1F);
         }
 
 

@@ -6,7 +6,6 @@ using TMPro;
 public class AutoScroll : MonoBehaviour
 {
     float speed = 40.0f;
-    float textPosBegin = -695.0f;
     float boundaryTextEnd = 1036.0f;
 
     RectTransform myTransform;
