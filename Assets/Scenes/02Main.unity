@@ -289,7 +289,7 @@ GameObject:
   - component: {fileID: 41221949}
   - component: {fileID: 41221950}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: DoorAudio
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -400,7 +400,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: fd5ae14e32270a8489130c1faf7c2e2d, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.4
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -31909,7 +31909,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 860869302}
   m_LocalRotation: {x: 0.015337918, y: 0.5879888, z: 0.015727386, w: 0.80857074}
-  m_LocalPosition: {x: -1.97, y: -2.672, z: 13.094}
+  m_LocalPosition: {x: -2.853, y: -2.672, z: 13.094}
   m_LocalScale: {x: 0.39809242, y: 0.16828956, z: 0.3792789}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -38244,7 +38244,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1610086346}
-  m_LocalRotation: {x: 0.06956115, y: -0.8216612, z: 0.10274114, w: 0.5563079}
+  m_LocalRotation: {x: 0.06956115, y: -0.8216612, z: 0.102741145, w: 0.5563079}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -46311,7 +46311,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 007f28375863b0c4985ea9c5348458ba, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.2
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -52382,7 +52382,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2141368285}
-  m_LocalRotation: {x: 0.06956117, y: -0.8216611, z: 0.102741145, w: 0.55630785}
+  m_LocalRotation: {x: 0.06956117, y: -0.8216611, z: 0.10274115, w: 0.55630785}
   m_LocalPosition: {x: 0, y: 0, z: -1.4118296}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0

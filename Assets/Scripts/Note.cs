@@ -8,7 +8,7 @@ public class Note : MonoBehaviour
     public GameObject NoteOB;
     void Update()
     {
-        // 
+        // Check if NoteOB is active, show NotePanel if it is
         if (NoteOB.activeInHierarchy)
         {
             NotePanel.SetActive(true);
@@ -22,6 +22,7 @@ public class Note : MonoBehaviour
         }
     }
     // Exit the Note panel
+    // Click on ExitNotePanel to disappear
     public void Exit()
     {
         NotePanel.SetActive(false);

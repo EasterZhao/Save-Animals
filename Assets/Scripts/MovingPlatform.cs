@@ -20,11 +20,13 @@ public class MovingPlatform : MonoBehaviour
 
     void Start()
     {
+        // set the previous waypoint as the first waypoint in the path and set the target as the second waypoint
         TargetNextWaypoint();
     }
 
     void FixedUpdate()
     {
+        // Calculate the percentage of completed routes
         _elapsedTime += Time.deltaTime;
 
         float elapsedPercentage = _elapsedTime / _timeToWaypoint;
@@ -37,15 +39,16 @@ public class MovingPlatform : MonoBehaviour
             TargetNextWaypoint();
         }
     }
-
+    // locate the next waypoint in the path
     private void TargetNextWaypoint()
     {
+        // set the previous waypoint to the current waypoint at the target index        
         _previousWaypoint = _waypointPath.GetWaypoint(_targetWaypointIndex);
         _targetWaypointIndex = _waypointPath.GetNextWaypointIndex(_targetWaypointIndex);
         _targetWaypoint = _waypointPath.GetWaypoint(_targetWaypointIndex);
-
+        // Reset time to 0
         _elapsedTime = 0;
-
+        //Get the distance between the previous waypoint and the target waypoint, each time this method is called it will change to the next waypoint in the path
         float distanceToWaypoint = Vector3.Distance(_previousWaypoint.position, _targetWaypoint.position);
         _timeToWaypoint = distanceToWaypoint / _speed;
     }

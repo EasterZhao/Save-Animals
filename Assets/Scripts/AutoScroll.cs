@@ -21,21 +21,20 @@ public class AutoScroll : MonoBehaviour
 
     IEnumerator AutoScrollText()
     {
-        while(myTransform.localPosition.y< boundaryTextEnd)
+        // Whenever the current y position of the caption is less than the end position
+        //The caption moves up until the condition is not met
+        while (myTransform.localPosition.y < boundaryTextEnd)
         {
             myTransform.Translate(Vector3.up * speed * Time.deltaTime);
             yield return null;
 
         }
-        if(myTransform.localPosition.y >= boundaryTextEnd)
+        // When the y position of the caption is greater than or equal to the end position
+        // The Exit button appears
+        if (myTransform.localPosition.y >= boundaryTextEnd)
         {
-             exitPanel.SetActive(true);
+            exitPanel.SetActive(true);
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

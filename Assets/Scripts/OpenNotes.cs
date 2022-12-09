@@ -17,7 +17,7 @@ public class OpenNotes : MonoBehaviour
 
     public void Update()
     {
-
+        // If the player presses E and is in the trigger, the note page opens
         if (Input.GetKeyDown(KeyCode.E))
         {
 
@@ -31,6 +31,7 @@ public class OpenNotes : MonoBehaviour
 
 
     }
+    // Player enters the Note's trigger to display the word prompt and set the event to true
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Reach"))
@@ -39,6 +40,7 @@ public class OpenNotes : MonoBehaviour
             Action = true;
         }
     }
+    // Exit the Note's trigger to hide the word prompt and set the event to false
     void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Reach"))

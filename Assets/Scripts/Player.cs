@@ -38,7 +38,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        // Player shifts and changes axis direction with the camera
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
 
@@ -53,12 +53,12 @@ public class Player : MonoBehaviour
         {
             lastGroundedTime = Time.time;
         }
-
+        // Player presses space to jump
         if (Input.GetButtonDown("Jump"))
         {
             audioSource.PlayOneShot(impact, 1F);
             jumpButtonPressedTime = Time.time;
-            //Play jump animation
+            // Play jump animation
             animator.SetBool("isJumping",true);
             animator.SetBool("isRunning",false);
         }
@@ -83,7 +83,7 @@ public class Player : MonoBehaviour
         {
             characterController.stepOffset = 0;
         }
-
+        // Player speed change
         Vector3 velocity = movementDirection * magnitude;
         velocity.y = ySpeed;
 
@@ -91,7 +91,7 @@ public class Player : MonoBehaviour
 
         if (movementDirection != Vector3.zero)
         {
-           //play Running animation
+           // Play Running animation
             animator.SetBool("isRunning", true);
             animator.SetBool("isIdle",false);
             Quaternion toRotation = Quaternion.LookRotation(movementDirection, Vector3.up);
@@ -100,7 +100,7 @@ public class Player : MonoBehaviour
         }
         else
         {
-            //Play Idle animation
+            // Play Idle animation
             animator.SetBool("isRunning", false);
             animator.SetBool("isIdle",true);
         }

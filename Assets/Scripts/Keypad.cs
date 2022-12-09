@@ -39,6 +39,7 @@ public class Keypad : MonoBehaviour
     public void Execute()
     {
         // The value entered, the right is displayed right ,wrong is displayed wrong
+        // Play the corresponding audio
         if (textOB.text == answer)
         {
             textOB.text = "Right";
@@ -71,6 +72,7 @@ public class Keypad : MonoBehaviour
         Time.timeScale = 1f;
         Cursor.lockState = CursorLockMode.Locked;
     }
+    // Delayed by one second to run the exit function
     IEnumerator EnableKeypadPanel()
     {
         yield return new WaitForSeconds(1f);
@@ -81,6 +83,7 @@ public class Keypad : MonoBehaviour
 
     public void Update()
     {
+        // Check if the keypadOB is active, if the value entered is right open the door
         if (keypadOB.activeInHierarchy)
         {
             hud.SetActive(false);
@@ -91,7 +94,6 @@ public class Keypad : MonoBehaviour
             if (textOB.text == "Right")
             {
                 ANI.SetBool("animate", true);
-                Debug.Log("its open");
                 Time.timeScale = 1f;
                 StartCoroutine(EnableKeypadPanel());
             }

@@ -12,7 +12,7 @@ public class Laser : MonoBehaviour
 
     void Start()
     {
-        //Get component LineRenderer
+        // Get component LineRenderer
         lr = GetComponent<LineRenderer>();
     }
 
@@ -21,7 +21,8 @@ public class Laser : MonoBehaviour
         PlayerHit = false;
         lr.SetPosition(0, startPoint.position);
         RaycastHit hit;
-        // draws a line along the length of the Ray whenever a collision is detected:
+        // Draws a line along the length of the Ray whenever a collision is detected:
+        // If the ray touches the player PlayerHit event is true
         if (Physics.Raycast(transform.position, transform.forward, out hit))
         {
             if (hit.collider)

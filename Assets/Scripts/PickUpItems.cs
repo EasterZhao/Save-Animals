@@ -11,7 +11,7 @@ public class PickUpItems : MonoBehaviour
 
     public bool inReach;
 
-
+    // Player enters the Key's trigger to display the word prompt and set the event to true
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Reach")
@@ -20,7 +20,7 @@ public class PickUpItems : MonoBehaviour
             pickupText.SetActive(true);
         }
     }
-
+    // Player Exits the Key's trigger to hide the word prompt and set the event to false
     void OnTriggerExit(Collider other)
     {
         if (other.gameObject.tag == "Reach")
@@ -33,6 +33,7 @@ public class PickUpItems : MonoBehaviour
 
     void Update()
     {
+        // Player presses E to pick up the key
         if(inReach && Input.GetKeyDown(KeyCode.E))
         {
             pickupOB.SetActive(false);

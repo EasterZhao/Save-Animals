@@ -22,7 +22,7 @@ public class OpenBoxScript : MonoBehaviour
         keyMissingText.SetActive(false);
     }
 
-
+    // Player enters the Box's trigger to display the word prompt and set the event to true
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Reach")
@@ -33,6 +33,7 @@ public class OpenBoxScript : MonoBehaviour
         }
     }
 
+    // Exit the Box's trigger to hide the word prompt and set the event to false
     void OnTriggerExit(Collider other)
     {
         if (other.gameObject.tag == "Reach")
@@ -46,6 +47,7 @@ public class OpenBoxScript : MonoBehaviour
 
     void Update()
     {
+        //  If the player has the key and presses E, open the box
         if (keyOBNeeded.activeInHierarchy == true && inReach && Input.GetKeyDown(KeyCode.E))
         {
             keyOBNeeded.SetActive(false);
@@ -58,6 +60,7 @@ public class OpenBoxScript : MonoBehaviour
             audioSource.Play();
         }
 
+        //  If the player presses E and there is no key the word locked is displayed
         else if (keyOBNeeded.activeInHierarchy == false && inReach && Input.GetKeyDown(KeyCode.E))
         {
             openText.SetActive(false);
@@ -67,6 +70,7 @@ public class OpenBoxScript : MonoBehaviour
             audioSource.Play();
         }
 
+        // If the box opens the current code and the collision body of the box disappears
         if (isOpen)
         {
             boxOB.GetComponent<BoxCollider>().enabled = false;

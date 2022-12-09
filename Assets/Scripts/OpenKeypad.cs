@@ -15,6 +15,7 @@ public class OpenKeypad : MonoBehaviour
         inReach = false;
     }
 
+    // Player enters the Keypad's trigger to display the word prompt and set the event to true
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Reach")
@@ -25,6 +26,7 @@ public class OpenKeypad : MonoBehaviour
         }
     }
 
+    // Player Exits the Keypad's trigger to hide the word prompt and set the event to false
     void OnTriggerExit(Collider other)
     {
         if (other.gameObject.tag == "Reach")
@@ -38,6 +40,7 @@ public class OpenKeypad : MonoBehaviour
 
     void Update()
     {
+        // If the player presses E and is in the trigger, the keypad page opens
         if (Input.GetKeyDown(KeyCode.E) && inReach)
         {
             keypadOB.SetActive(true);

@@ -208,7 +208,7 @@ MonoBehaviour:
     experimentation should be banned.\r\n\r\nI look forward to the day we stop using
     sentient beings in laboratory experiments. \r\n\r\nIf you see someone abusing
     or experimenting on illegal animals in real life, call Animal Protection on 0300
-    1234 999\r\nHelping animals who really need help\r\n(Based on a true story)\r\n"
+    1234 999\r\nHelping animals who really need help\r.\nThanks for playing.\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 44d894c9701230746be5da893d64490d, type: 2}
   m_sharedMaterial: {fileID: -3657054652670702121, guid: 44d894c9701230746be5da893d64490d, type: 2}
@@ -612,7 +612,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 45f0c0cc26f5a904ebdaffdbaaed149d, type: 3}
+  m_audioClip: {fileID: 8300000, guid: b8f42700163290142abc03b69d850fda, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.2
   m_Pitch: 1

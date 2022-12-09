@@ -17,10 +17,9 @@ public class Dialogue : MonoBehaviour
         StartDialogue();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        //
+        //Detects if the player has clicked the left mouse button
         if (Input.GetMouseButtonDown(0))
         {
             if (textComponent.text == lines[index])
@@ -41,7 +40,7 @@ public class Dialogue : MonoBehaviour
         index = 0;
         StartCoroutine(TypeLine());
     }
-
+    // Delayed display of text characters
     IEnumerator TypeLine()
     {
         foreach (char c in lines[index].ToCharArray())
@@ -50,15 +49,15 @@ public class Dialogue : MonoBehaviour
             yield return new WaitForSeconds(textSpeed);
         }
     }
-
+    //Display the next sentence and play the sound, if the next sentence is empty cancel the dialog box
     void NextLine()
     {
         if (index < lines.Length - 1)
         {
             index++;
             textComponent.text = string.Empty;
-                            var audioSource = GetComponent<AudioSource>();
-                audioSource.Play();
+            var audioSource = GetComponent<AudioSource>();
+            audioSource.Play();
             StartCoroutine(TypeLine());
         }
         else
